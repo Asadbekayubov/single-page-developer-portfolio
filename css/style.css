@@ -344,6 +344,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
   color: #FFFFFF;
   transition: 0.3s;
+  text-align: center;
 }
 
 .btn:hover {
@@ -428,14 +429,15 @@ h2 {
 }
 
 h3 {
-  font-size: 4.8rem;
-  line-height: 1.6;
+  font-size: 2.4rem;
+  line-height: 1.3;
 }
 
 .skills {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 17rem;
 }
 .skills .skills__item {
   display: flex;
@@ -446,12 +448,74 @@ h3 {
   margin: 1.9rem 0rem;
 }
 
+.projects .project__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+.projects .projects__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.projects .projects__cards .projects_cards__item {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 7.9rem;
+}
+.projects .projects__cards .projects_cards__item:hover .projects_cards__item__img {
+  opacity: 0.4;
+}
+.projects .projects__cards .projects_cards__item .projects__cards__item__links {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  position: absolute;
+  top: 13rem;
+  left: 20rem;
+  z-index: 0;
+}
+.projects .projects__cards .projects_cards__item .projects_cards__item__img {
+  width: 100%;
+  transition: 0.3s;
+  margin-bottom: 2rem;
+}
+.projects .projects__cards .projects_cards__item .projects_cards__item__title {
+  margin-bottom: 0.7rem;
+}
+.projects .projects__cards .projects_cards__item .projects_cards__item__description__wrapper {
+  display: flex;
+  gap: 1.8rem;
+}
+
+@media screen and (max-width: 1180px) {
+  .projects .projects__cards {
+    justify-content: center;
+    padding-bottom: 6rem;
+    gap: 6rem;
+  }
+  .projects .projects__cards .projects_cards__item {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects_cards__item {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 727px) {
   .skills {
     justify-content: center;
   }
   .skills .skills__item {
     text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .project__top__title {
+    font-size: 4rem;
   }
 }
 @media screen and (max-width: 375px) {
